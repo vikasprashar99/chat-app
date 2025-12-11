@@ -2,10 +2,15 @@
 
 A chatbot application that learns from conversations and can generate personality profiles based on chat history.
 
+## 🚀 Live Demo
+
+- **Frontend**: [https://chat-app-gamma-umber-53.vercel.app](https://chat-app-gamma-umber-53.vercel.app)
+- **Backend API**: [https://chat-app-g91c.onrender.com](https://chat-app-g91c.onrender.com)
+
 ## Features
 
 - 💬 Multiple chat conversations
-- 🤖 AI-powered responses using Google Gemini
+- 🤖 AI-powered responses using Groq (Llama 3.1)
 - 🧠 Personality profile generation - ask "Who am I?" to get insights
 - 💾 Persistent storage with Turso DB
 - 🎨 Clean UI with Shadcn components
@@ -15,7 +20,8 @@ A chatbot application that learns from conversations and can generate personalit
 - **Frontend**: React + Vite + TypeScript + Tailwind CSS + Shadcn UI
 - **Backend**: Node.js + Express + TypeScript (ESM)
 - **Database**: Turso (libSQL)
-- **AI**: Google Gemini API
+- **AI**: Groq API (Llama 3.1)
+- **Hosting**: Vercel (Frontend) + Render (Backend)
 
 ## Project Structure
 
@@ -42,7 +48,7 @@ chat-bot-rag/
 
 - Node.js 18+
 - Turso account and database
-- Google Gemini API key
+- Groq API key
 
 ### Server Setup
 
@@ -56,7 +62,7 @@ chat-bot-rag/
    ```env
    TURSO_DATABASE_URL=your_turso_url
    TURSO_AUTH_TOKEN=your_turso_token
-   GEMINI_API_KEY=your_gemini_api_key
+   GROQ_API_KEY=your_groq_api_key
    PORT=3001
    ```
 
@@ -101,7 +107,7 @@ When you ask questions like:
 - "What do you know about me?"
 - "Describe me"
 
-The app fetches all your previous messages from the database and uses Gemini to analyze your communication style, interests, and personality traits.
+The app fetches your previous messages from the current chat and uses Groq (Llama 3.1) to analyze your communication style, interests, and personality traits.
 
 ## API Endpoints
 
