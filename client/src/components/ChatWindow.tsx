@@ -85,10 +85,6 @@ export function ChatWindow({ chatId, onTitleUpdate }: ChatWindowProps) {
           <p className="text-muted-foreground mb-4">
             Start a conversation and I'll learn about you. After chatting, ask "Who am I?" to see your personality profile!
           </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <Sparkles className="h-4 w-4" />
-            <span>Powered by Gemini AI</span>
-          </div>
         </div>
       </div>
     );
