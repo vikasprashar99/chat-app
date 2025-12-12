@@ -23,25 +23,6 @@ A chatbot application that learns from conversations and can generate personalit
 - **AI**: Groq API (Llama 3.1)
 - **Hosting**: Vercel (Frontend) + Render (Backend)
 
-## Project Structure
-
-```
-chat-bot-rag/
-├── client/          # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── lib/
-│   │   └── types/
-│   └── package.json
-└── server/          # Node.js backend
-    ├── src/
-    │   ├── index.ts
-    │   ├── db.ts
-    │   ├── ai.ts
-    │   └── types.ts
-    └── package.json
-```
-
 ## Setup
 
 ### Prerequisites
@@ -98,23 +79,3 @@ cd server && npm test
 # Client tests
 cd client && npm test
 ```
-
-## How Personality Profiles Work
-
-When you ask questions like:
-- "Who am I?"
-- "Tell me about myself"
-- "What do you know about me?"
-- "Describe me"
-
-The app fetches your previous messages from the current chat and uses Groq (Llama 3.1) to analyze your communication style, interests, and personality traits.
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/chats | Get all chats |
-| POST | /api/chats | Create new chat |
-| DELETE | /api/chats/:id | Delete a chat |
-| GET | /api/chats/:id/messages | Get messages for a chat |
-| POST | /api/chats/:id/messages | Send a message |
